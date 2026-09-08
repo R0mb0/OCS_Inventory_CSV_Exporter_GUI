@@ -2,23 +2,38 @@
 
 # 🖥️ OCS Inventory CSV Exporter GUI
 
-A **Windows desktop application** (Python + PySide6) that automates scheduled CSV exports from **OCS Inventory NG**, with a resizable 3-section GUI, encrypted credential storage, automatic cleanup of old exports, and unattended autostart after a server reboot.
-
-This project is the desktop/GUI evolution of [`OCS_Inventory_CSV_Exporter`](https://github.com/R0mb0/OCS_Inventory_CSV_Exporter) (the original PowerShell + Playwright script): same underlying automation logic, now wrapped in a self-contained scheduler with a graphical interface, meant to run unattended on a Windows machine or server.
-
-<!-- Badges: add Codacy / build / release badges here once the repo is published -->
+[![pages-build-deployment](https://github.com/R0mb0/OCS_Inventory_CSV_Exporter_GUI/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/R0mb0/OCS_Inventory_CSV_Exporter_GUI/actions/workflows/pages/pages-build-deployment)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/39dcd55039fd49dbb07f21d0ae3ce084)](https://app.codacy.com/gh/R0mb0/OCS_Inventory_CSV_Exporter_GUI/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/R0mb0/PDF_mail_registration)
+[![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/R0mb0/PDF_mail_registration)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![PySide6](https://img.shields.io/badge/PySide6-Qt%20for%20Python-41CD52?logo=qt&logoColor=white)
 ![Playwright](https://img.shields.io/badge/Playwright-Automation-2EAD33?logo=playwright&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows&logoColor=white)
+[![Donate](https://img.shields.io/badge/PayPal-Donate%20to%20Author-blue.svg)](http://paypal.me/R0mb0)
+
+<p>
+    
+A **Windows desktop application** (Python + PySide6) that automates scheduled CSV exports from **OCS Inventory NG**, with a resizable 3-section GUI, encrypted credential storage, automatic cleanup of old exports, and unattended autostart after a server reboot.<br><br>
+
+This project is the desktop/GUI evolution of [`OCS_Inventory_CSV_Exporter`](https://github.com/R0mb0/OCS_Inventory_CSV_Exporter) (the original PowerShell + Playwright script): same underlying automation logic, now wrapped in a self-contained scheduler with a graphical interface, meant to run unattended on a Windows machine or server.
+
+</p>
+
+<div align="center">
+  <a href="http://paypal.me/R0mb0">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/R0mb0/Support_the_dev_badge/blob/main/Badge/SVG/Support_the_dev_badge_Dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://github.com/R0mb0/Support_the_dev_badge/blob/main/Badge/SVG/Support_the_dev_badge_Light.svg">
+      <img alt="Saved you time? Support the dev" src="https://github.com/R0mb0/Support_the_dev_badge/blob/main/Badge/SVG/Support_the_dev_badge_Default.svg">
+    </picture>
+  </a>
+</div>
 
 ## 🖼️ Screenshots
 
-<!-- Add screenshots here, e.g.:
-![Main window](docs/assets/img/screenshot-main.png)
-![Settings panel](docs/assets/img/screenshot-settings.png)
--->
+[![01.png](Readme_imgs/01.png)](Readme_imgs/01.png)
 
 </div>
 <hr>
@@ -131,3 +146,12 @@ start "" "OCSExporter.exe" --autostart
 ```
 
 The built-in single-instance guard makes it safe to have more than one autostart method configured at once while you figure out which fits your server best.
+
+<br>
+<a href="https://github.com/R0mb0/Crafted_with_AI">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/R0mb0/Crafted_with_AI/blob/main/Badge/SVG/CraftedWithAIDark.svg">
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/R0mb0/Crafted_with_AI/blob/main/Badge/SVG/NotMadeByAILight.svg">
+<img alt="Crafted with AI" src="https://github.com/R0mb0/Crafted_with_AI/blob/main/Badge/SVG/CraftedWithAIDefault.svg">
+</picture>
+</a>

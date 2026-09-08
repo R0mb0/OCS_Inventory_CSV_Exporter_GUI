@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OCS Inventory CSV Exporter GUI</title>
+  <meta name="description" content="A Windows desktop app that automates scheduled CSV exports from OCS Inventory NG." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>OCS Exporter</span>
+      </div>
+
+      <nav class="site-nav" aria-label="Section navigation">
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#how-it-works" data-i18n="nav.howItWorks">How it works</a>
+        <a href="#requirements" data-i18n="nav.requirements">Requirements</a>
+        <a href="#" data-github-link data-i18n="nav.download">Download</a>
+      </nav>
+
+      <div class="controls">
+        <select id="lang-select" data-i18n-attr="aria-label:lang.select">
+          <option value="en">English</option>
+          <option value="it">Italiano</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+          <option value="nl">Nederlands</option>
+        </select>
+        <button id="theme-toggle" class="icon-btn" type="button" data-i18n-attr="aria-label:theme.toggle" aria-label="Toggle light/dark theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1 data-i18n="hero.title">Scheduled OCS Inventory exports, on autopilot.</h1>
+        <p class="tagline" data-i18n="hero.tagline">
+          A Windows desktop app that logs into OCS Inventory NG, exports a full CSV on a schedule, cleans up old files
+          on its own, and comes back after a reboot — no one needs to be watching.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#" data-github-link>
+            <span aria-hidden="true">📦</span>
+            <span data-i18n="hero.ctaGithub">View source on GitHub</span>
+          </a>
+          <a class="btn btn-secondary" href="#" data-release-link>
+            <span aria-hidden="true">⬇️</span>
+            <span data-i18n="hero.ctaDownload">Get the latest release</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <h2 data-i18n="features.title">What it does</h2>
+        <p class="section-sub" data-i18n="features.sub">Everything the original PowerShell script did, plus a control panel that runs it for you.</p>
+
+        <div class="grid">
+          <div class="card">
+            <span class="emoji" aria-hidden="true">🧩</span>
+            <h3 data-i18n="features.item1.title">Layered, resizable GUI</h3>
+            <p data-i18n="features.item1.desc">Connection, loop interval and output settings stacked in three sections you can resize by dragging the dividers.</p>
+          </div>
+          <div class="card">
+            <span class="emoji" aria-hidden="true">⏱️</span>
+            <h3 data-i18n="features.item2.title">Scheduled extraction loop</h3>
+            <p data-i18n="features.item2.desc">Set an interval in minutes or hours; press the green Avvia button and it keeps exporting until you press Stop.</p>
+          </div>
+          <div class="card">
+            <span class="emoji" aria-hidden="true">🧹</span>
+            <h3 data-i18n="features.item3.title">Automatic cleanup</h3>
+            <p data-i18n="features.item3.desc">Keep only the last N CSV files and/or delete files older than a set period — both rules can run together.</p>
+          </div>
+          <div class="card">
+            <span class="emoji" aria-hidden="true">🔒</span>
+            <h3 data-i18n="features.item4.title">Encrypted credentials</h3>
+            <p data-i18n="features.item4.desc">The OCS password is encrypted at rest with Windows DPAPI — never written to disk in plain text.</p>
+          </div>
+          <div class="card">
+            <span class="emoji" aria-hidden="true">🌓</span>
+            <h3 data-i18n="features.item5.title">Follows your OS theme</h3>
+            <p data-i18n="features.item5.desc">Light and dark mode are detected automatically, with a manual override saved for next time.</p>
+          </div>
+          <div class="card">
+            <span class="emoji" aria-hidden="true">🔁</span>
+            <h3 data-i18n="features.item6.title">Survives a reboot</h3>
+            <p data-i18n="features.item6.desc">An --autostart flag and example launcher get the export loop running again on its own after the server restarts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots">
+      <div class="wrap">
+        <h2 data-i18n="screenshots.title">Screenshots</h2>
+        <p class="section-sub" data-i18n="screenshots.sub">Add your own screenshots of the running app here.</p>
+
+        <div class="screens">
+          <!-- Replace with: <img src="assets/img/screenshot-main.png" alt="Main window"> -->
+          <div class="screen-placeholder" data-i18n="screenshots.placeholder1">Main window screenshot goes here</div>
+          <!-- Replace with: <img src="assets/img/screenshot-settings.png" alt="Settings panel"> -->
+          <div class="screen-placeholder" data-i18n="screenshots.placeholder2">Settings panel screenshot goes here</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="wrap">
+        <h2 data-i18n="howItWorks.title">How it works</h2>
+        <p class="section-sub" data-i18n="howItWorks.sub">The same automation flow as the original ocs_export.ps1 script, now orchestrated by the app.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="num" aria-hidden="true"></div>
+            <div>
+              <strong data-i18n="howItWorks.step1.title">Log in</strong>
+              <p data-i18n="howItWorks.step1.desc">Signs into OCS Inventory NG using the credentials you configured.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num" aria-hidden="true"></div>
+            <div>
+              <strong data-i18n="howItWorks.step2.title">Open advanced search</strong>
+              <p data-i18n="howItWorks.step2.desc">Navigates to the advanced search page for the inventory table.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num" aria-hidden="true"></div>
+            <div>
+              <strong data-i18n="howItWorks.step3.title">Enable every column</strong>
+              <p data-i18n="howItWorks.step3.desc">Toggles every available column so the export is always complete.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num" aria-hidden="true"></div>
+            <div>
+              <strong data-i18n="howItWorks.step4.title">Export the CSV</strong>
+              <p data-i18n="howItWorks.step4.desc">Triggers the export and saves the file with a timestamped name.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num" aria-hidden="true"></div>
+            <div>
+              <strong data-i18n="howItWorks.step5.title">Clean up old files</strong>
+              <p data-i18n="howItWorks.step5.desc">Applies your cleanup rules to the output folder, if enabled.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num" aria-hidden="true"></div>
+            <div>
+              <strong data-i18n="howItWorks.step6.title">Wait and repeat</strong>
+              <p data-i18n="howItWorks.step6.desc">Sleeps for the configured interval, then starts the next cycle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="requirements">
+      <div class="wrap">
+        <h2 data-i18n="requirements.title">Requirements</h2>
+        <ul class="reqs">
+          <li data-i18n="requirements.item1">Windows 10 or 11</li>
+          <li data-i18n="requirements.item2">Python 3.10+ (if running from source)</li>
+          <li data-i18n="requirements.item3">Network access to your OCS Inventory instance</li>
+          <li data-i18n="requirements.item4">A valid OCS Inventory user account</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        <span data-i18n="footer.madeWith">Built by Francesco Rombaldoni.</span>
+        ·
+        <a href="#" data-github-link data-i18n="footer.viewSource">View source on GitHub</a>
+        ·
+        <span data-i18n="footer.license">Released under the MIT License.</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

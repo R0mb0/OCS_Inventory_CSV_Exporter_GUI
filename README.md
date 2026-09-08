@@ -1,3 +1,5 @@
+<div align="center">
+
 # 🖥️ OCS Inventory CSV Exporter GUI
 
 A **Windows desktop application** (Python + PySide6) that automates scheduled CSV exports from **OCS Inventory NG**, with a resizable 3-section GUI, encrypted credential storage, automatic cleanup of old exports, and unattended autostart after a server reboot.
@@ -11,7 +13,15 @@ This project is the desktop/GUI evolution of [`OCS_Inventory_CSV_Exporter`](http
 ![Playwright](https://img.shields.io/badge/Playwright-Automation-2EAD33?logo=playwright&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows&logoColor=white)
 
----
+## 🖼️ Screenshots
+
+<!-- Add screenshots here, e.g.:
+![Main window](docs/assets/img/screenshot-main.png)
+![Settings panel](docs/assets/img/screenshot-settings.png)
+-->
+
+</div>
+<hr>
 
 ## 🚀 Why this project exists
 
@@ -30,12 +40,6 @@ OCS Inventory NG doesn't always allow direct database access in enterprise/schoo
 - **No hardcoded environment details**: OCS URL, credentials and output folder are all configured from the app itself — nothing project-specific is baked into the code
 - **CLI companion tool** (`run_export.py`): run a single export from the command line, useful for first-time setup and debugging without opening the GUI
 
-## 🖼️ Screenshots
-
-<!-- Add screenshots here, e.g.:
-![Main window](docs/assets/img/screenshot-main.png)
-![Settings panel](docs/assets/img/screenshot-settings.png)
--->
 
 ## 📁 Repository structure
 

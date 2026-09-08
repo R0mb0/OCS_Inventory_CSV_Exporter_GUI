@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 from PySide6.QtCore import QByteArray, Qt
-from PySide6.QtGui import QAction, QActionGroup, QCloseEvent
+from PySide6.QtGui import QAction, QActionGroup, QCloseEvent, QIcon
 from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QSplitter
 
 from core.cleanup import CleanupSettings
@@ -30,12 +30,17 @@ from gui.theme import apply_theme
 WINDOW_TITLE = "OCS Exporter"
 THEME_MODES = ["auto", "light", "dark"]
 
+# icon.ico sta nella cartella del progetto (un livello sopra gui/).
+ICON_PATH = Path(__file__).resolve().parent.parent / "icon.ico"
+
 
 class MainWindow(QMainWindow):
     def __init__(self, app: QApplication, autostart: bool = False) -> None:
         super().__init__()
         self._app = app
         self.setWindowTitle(WINDOW_TITLE)
+        if ICON_PATH.exists():
+            self.setWindowIcon(QIcon(str(ICON_PATH)))
         self.resize(760, 640)
 
         self.config: dict[str, Any] = load_config()

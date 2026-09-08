@@ -16,13 +16,18 @@ from __future__ import annotations
 
 import argparse
 import sys
+from pathlib import Path
 
+from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication, QMessageBox
 
 from core.config import load_config
 from core.i18n import SUPPORTED_LANGUAGES, detect_system_language, set_language, t
 from core.single_instance import acquire_single_instance
 from gui.main_window import MainWindow
+
+# icon.ico sta nella cartella del progetto, accanto a questo file.
+ICON_PATH = Path(__file__).resolve().parent / "icon.ico"
 
 
 def parse_args() -> argparse.Namespace:
@@ -39,6 +44,11 @@ def main() -> int:
     args = parse_args()
     app = QApplication(sys.argv)
     app.setApplicationName("OCS Exporter")
+    if ICON_PATH.exists():
+        # Applicata a livello di app: vale anche per finestre di dialogo
+        # mostrate prima che la MainWindow esista (es. avviso "gia' in
+        # esecuzione") e per l'icona nella taskbar/alt-tab di Windows.
+        app.setWindowIcon(QIcon(str(ICON_PATH)))
 
     # Applica la lingua configurata (o quella di sistema) anche per questo
     # eventuale avviso iniziale, prima ancora di creare la MainWindow (che
